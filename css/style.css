@@ -1,3 +1,20 @@
+/* Google Fonts - start */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&display=swap');
+/* Google Fonts - end */
+
+body {
+	font-family: 'Nunito Sans', sans-serif !important;
+}
+
+
+/* Titulo "Resultado de Busqueda" - start */
+.titulofiltro {
+	text-align: center;
+}
+/* Titulo "Resultado de Busqueda" - end */
+
+
+/* Template - Products - start */
 .crud-table {
 	display: flex;
 	flex-wrap: wrap;
@@ -31,6 +48,8 @@
 
 	display: flex;
 	align-items: center;
+	
+	text-transform: uppercase;
 }
 
 .p_price {
@@ -42,10 +61,18 @@
 	margin: 10px 0;
 }
 
+/* Template - Products - end */
+
+
+/* Template - Sidebar Category - start */
+.s_name {
+	text-transform: capitalize;
+}
+
 .s_name:hover {
 	color: white;
 }
 
-.titulofiltro {
-	text-align: center;
-}
+/* Template - Sidebar Category - end */
+
+
