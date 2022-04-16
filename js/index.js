@@ -69,6 +69,9 @@ d.addEventListener("submit", e => {
   if (e.target === $form) {
     e.preventDefault();
     console.log(e.target.sb.value);
+    
+    //Filter title
+    document.querySelector(".titulofiltro").textContent = "Resultado de Busqueda";
 
     axios.get(API_URL_PRODUCTS + "/search/" + e.target.sb.value)
       .then(function (response) {
@@ -101,9 +104,13 @@ d.addEventListener("submit", e => {
 
 // CLICK ON CATEGORIES
 d.addEventListener("click", e => {
-  if (e.target.matches("span")) {
+  if (e.target.matches(".s_name")) {
     console.log(e.target.dataset.id);
-
+    console.log(e.target.dataset.name);
+    
+    //Filter title
+    document.querySelector(".titulofiltro").innerHTML =  `<u>Filtrado por:</u> ` + e.target.dataset.name;
+    
     axios.get(API_URL_PRODUCTS + "/cat/" + e.target.dataset.id)
       .then(function (response) {
         console.log(response.data);
