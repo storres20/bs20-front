@@ -72,6 +72,9 @@ d.addEventListener("submit", e => {
     
     //Filter title
     document.querySelector(".titulofiltro").textContent = "Resultado de Busqueda";
+    
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("crud-table").style.display = "none";
 
     axios.get(API_URL_PRODUCTS + "/search/" + e.target.sb.value)
       .then(function (response) {
@@ -92,6 +95,9 @@ d.addEventListener("submit", e => {
         });
 
         $table.appendChild($fragment);
+        
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("crud-table").style.display = "block";
 
 
       })
