@@ -69,6 +69,33 @@ d.addEventListener("submit", e => {
   if (e.target === $form) {
     e.preventDefault();
     console.log(e.target.sb.value);
+
+    axios.get(API_URL_PRODUCTS + "/search/" + e.target.sb.value)
+      .then(function (response) {
+        console.log(response.data);
+        let datacat = response.data;
+
+        //Clean all
+        $table.innerHTML = "";
+
+        //Show product by search bar
+        datacat.forEach(el => {
+          $template.querySelector(".p_img").src = (el.url_image == "" || el.url_image === null) ? "./img/noimage.png" : el.url_image;
+          $template.querySelector(".p_name").textContent = el.name;
+          $template.querySelector(".p_price").textContent = el.price;
+
+          let $clone = d.importNode($template, true);
+          $fragment.appendChild($clone);
+        });
+
+        $table.appendChild($fragment);
+
+
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
   }
 })
 
@@ -81,7 +108,7 @@ d.addEventListener("click", e => {
       .then(function (response) {
         console.log(response.data);
         let datacat = response.data;
-        
+
         //Clean all
         $table.innerHTML = "";
 
