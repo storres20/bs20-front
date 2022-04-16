@@ -1,6 +1,8 @@
-.p_group {
+.crud-table {
 	display: flex;
 	flex-wrap: wrap;
+	
+	justify-content: center;
 }
 
 .product {
@@ -11,8 +13,31 @@
 
 	width: 200px;
 	height: auto;
+	
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5px;
 }
 
 .p_img {
 	width: 150px;
+	height: 150px;
+}
+
+.p_name {
+  text-align: center;
+  margin: 0;
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+}
+
+.p_price {
+  margin: 0;
+}
+
+.p_span {
+  display: flex;
+  margin: 10px 0;
 }
