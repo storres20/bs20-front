@@ -17,6 +17,7 @@ const d = document,
 // GET ALL DATA
 const getAll = () => {
 
+  //Loader On
   document.getElementById("loader").style.display = "block";
   document.getElementById("crud-table").style.display = "none";
     
@@ -37,6 +38,7 @@ const getAll = () => {
 
       $table.appendChild($fragment);
       
+      //Loader Off
       document.getElementById("loader").style.display = "none";
       document.getElementById("crud-table").style.display = "block";
 
@@ -80,6 +82,7 @@ d.addEventListener("submit", e => {
     //Filter title
     document.querySelector(".titulofiltro").textContent = "Resultado de Busqueda";
     
+    //Loader On
     document.getElementById("loader").style.display = "block";
     document.getElementById("crud-table").style.display = "none";
 
@@ -103,6 +106,7 @@ d.addEventListener("submit", e => {
 
         $table.appendChild($fragment);
         
+        //Loader Off
         document.getElementById("loader").style.display = "none";
         document.getElementById("crud-table").style.display = "block";
 
@@ -124,6 +128,7 @@ d.addEventListener("click", e => {
     //Filter title
     document.querySelector(".titulofiltro").innerHTML =  `<u>Filtrado por:</u> ` + e.target.dataset.name;
     
+    //Loader On
     document.getElementById("loader").style.display = "block";
     document.getElementById("crud-table").style.display = "none";
     
@@ -147,6 +152,7 @@ d.addEventListener("click", e => {
 
         $table.appendChild($fragment);
         
+        //Loader Off
         document.getElementById("loader").style.display = "none";
         document.getElementById("crud-table").style.display = "block";
 
