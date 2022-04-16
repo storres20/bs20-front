@@ -1,0 +1,18 @@
+.p_group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 200px;
+	height: auto;
+}
+
+.p_img {
+	width: 150px;
+}
