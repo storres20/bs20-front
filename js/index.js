@@ -1,6 +1,9 @@
+//URL API products
 const API_URL_PRODUCTS = 'http://localhost:8080/api/products';
+//URL API categories
 const API_URL_CATEGORIES = 'http://localhost:8080/api/categories';
 
+//DOM
 const d = document,
 $table = d.querySelector(".crud-table"),
 $template = d.getElementById("crud-template").content,
@@ -10,7 +13,7 @@ $template2 = d.getElementById("sidebar-template").content,
 
 $fragment = d.createDocumentFragment();
 
-// Make a request for a user with a given ID
+// AXIOS - Get all data from product table and render in front
 axios.get(API_URL_PRODUCTS)
   .then(function (response) {
     console.log(response.data);
@@ -33,7 +36,7 @@ axios.get(API_URL_PRODUCTS)
   });
   
   
-  // Make a request for a user with a given ID
+// AXIOS - Get all data from category table and render in front
 axios.get(API_URL_CATEGORIES)
 .then(function (response) {
   console.log(response.data);
@@ -41,6 +44,8 @@ axios.get(API_URL_CATEGORIES)
   
   data2.forEach(el => {
     $template2.querySelector(".s_name").textContent = el.name;
+    $template2.querySelector(".s_li").dataset.id = el.id;
+    $template2.querySelector(".s_li").dataset.name = el.name;
     
     let $clone2 = d.importNode($template2, true);
     $fragment.appendChild($clone2);
