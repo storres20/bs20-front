@@ -20,6 +20,7 @@ const getAll = () => {
   //Loader On
   document.getElementById("loader").style.display = "block";
   document.getElementById("crud-table").style.display = "none";
+  document.querySelector("body").style.pointerEvents = "none";
     
   // AXIOS - Get all data from product table and render in front
   axios.get(API_URL_PRODUCTS)
@@ -41,6 +42,7 @@ const getAll = () => {
       //Loader Off
       document.getElementById("loader").style.display = "none";
       document.getElementById("crud-table").style.display = "block";
+      document.querySelector("body").style.pointerEvents = "visible";
 
     })
     .catch(function (error) {
@@ -85,6 +87,7 @@ d.addEventListener("submit", e => {
     //Loader On
     document.getElementById("loader").style.display = "block";
     document.getElementById("crud-table").style.display = "none";
+    document.querySelector("body").style.pointerEvents = "none";
 
     axios.get(API_URL_PRODUCTS + "/search/" + e.target.sb.value)
       .then(function (response) {
@@ -109,6 +112,7 @@ d.addEventListener("submit", e => {
         //Loader Off
         document.getElementById("loader").style.display = "none";
         document.getElementById("crud-table").style.display = "block";
+        document.querySelector("body").style.pointerEvents = "visible";
 
 
       })
@@ -131,6 +135,7 @@ d.addEventListener("click", e => {
     //Loader On
     document.getElementById("loader").style.display = "block";
     document.getElementById("crud-table").style.display = "none";
+    document.querySelector("body").style.pointerEvents = "none";
     
     axios.get(API_URL_PRODUCTS + "/cat/" + e.target.dataset.id)
       .then(function (response) {
@@ -155,6 +160,7 @@ d.addEventListener("click", e => {
         //Loader Off
         document.getElementById("loader").style.display = "none";
         document.getElementById("crud-table").style.display = "block";
+        document.querySelector("body").style.pointerEvents = "visible";
 
 
       })
