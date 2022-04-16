@@ -42,6 +42,10 @@
   margin: 10px 0;
 }
 
-.link_color {
+.s_name:hover{
   color: white;
+}
+
+.titulofiltro {
+	text-align: center;
 }
