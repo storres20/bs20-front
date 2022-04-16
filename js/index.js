@@ -111,6 +111,9 @@ d.addEventListener("click", e => {
     //Filter title
     document.querySelector(".titulofiltro").innerHTML =  `<u>Filtrado por:</u> ` + e.target.dataset.name;
     
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("crud-table").style.display = "none";
+    
     axios.get(API_URL_PRODUCTS + "/cat/" + e.target.dataset.id)
       .then(function (response) {
         console.log(response.data);
@@ -130,6 +133,9 @@ d.addEventListener("click", e => {
         });
 
         $table.appendChild($fragment);
+        
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("crud-table").style.display = "block";
 
 
       })
