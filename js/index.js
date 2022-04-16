@@ -16,6 +16,10 @@ const d = document,
 
 // GET ALL DATA
 const getAll = () => {
+
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("crud-table").style.display = "none";
+    
   // AXIOS - Get all data from product table and render in front
   axios.get(API_URL_PRODUCTS)
     .then(function (response) {
@@ -32,6 +36,9 @@ const getAll = () => {
       });
 
       $table.appendChild($fragment);
+      
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("crud-table").style.display = "block";
 
     })
     .catch(function (error) {
