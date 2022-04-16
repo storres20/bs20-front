@@ -7,6 +7,7 @@
 
 		<!-- CSS style -->
 		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<link rel="stylesheet" type="text/css" href="./css/loader.css" />
 
 		<!-- Bootstrap 5 -->
 		<link
@@ -107,9 +108,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col py-3">
-				<h1 class="titulofiltro">Todos los productos</h1>
-					<div class="crud-table">
+				<div id="loader" style="display:none;"></div>
+				<div class="col py-3" id="crud-table">
+					<h1 class="titulofiltro">Todos los productos</h1>
+					<div class="crud-table animate-bottom" >
 						<!-- <div class="product">
 							<img
 								class="p_img"
@@ -128,11 +130,7 @@
 		<!-- Template - start -->
 		<template id="crud-template">
 			<div class="product">
-				<img
-					class="p_img"
-					src=""
-					alt="product_image"
-				/>
+				<img class="p_img" src="" alt="product_image" />
 				<p class="p_name"></p>
 				<span class="p_span"
 					>$
