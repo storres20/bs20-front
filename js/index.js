@@ -40,9 +40,7 @@ axios.get(API_URL_CATEGORIES)
   let data2 = response.data;
   
   data2.forEach(el => {
-    //$template2.querySelector(".p_img").src = (el.url_image=="" || el.url_image===null) ? "./img/noimage.png" : el.url_image;
     $template2.querySelector(".s_name").textContent = el.name;
-    //$template2.querySelector(".p_price").textContent = el.price;
     
     let $clone2 = d.importNode($template2, true);
     $fragment.appendChild($clone2);
