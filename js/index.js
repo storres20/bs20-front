@@ -26,6 +26,13 @@ const d = document,
    */
 const getAllProduct = () => {
 
+  //Clean all
+  $table.innerHTML = "";
+    
+  //Filter title
+  document.querySelector(".titulofiltro").textContent = "Todos los productos";
+  document.querySelector(".titulofiltro").style.marginTop = "0px";
+
   //Loader On
   document.getElementById("loader").style.display = "block";
   document.getElementById("crud-table").style.display = "none";
