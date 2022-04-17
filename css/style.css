@@ -81,3 +81,12 @@ body {
 /* Template - Sidebar Category - end */
 
 
+
+/* Hide SideBar Left in mobile view - start */
+@media (max-width: 600px) {
+	.hiddenmobile {
+		display: none;
+	}
+}
+/* Hide SideBar Left in mobile view - start */
+
