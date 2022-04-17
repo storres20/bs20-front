@@ -32,6 +32,9 @@ const getAll = () => {
         $template.querySelector(".p_img").src = (el.url_image == "" || el.url_image === null) ? "./img/noimage.png" : el.url_image;
         $template.querySelector(".p_name").textContent = el.name;
         $template.querySelector(".p_price").textContent = el.price;
+        $template.querySelector(".p_price").style.textDecoration = (el.discount == 0) ? "" : "line-through"
+        
+        $template.querySelector(".p_discount").textContent = el.price - el.discount;
 
         let $clone = d.importNode($template, true);
         $fragment.appendChild($clone);
@@ -102,6 +105,10 @@ d.addEventListener("submit", e => {
           $template.querySelector(".p_img").src = (el.url_image == "" || el.url_image === null) ? "./img/noimage.png" : el.url_image;
           $template.querySelector(".p_name").textContent = el.name;
           $template.querySelector(".p_price").textContent = el.price;
+          
+          $template.querySelector(".p_price").style.textDecoration = (el.discount == 0) ? "" : "line-through"
+        
+          $template.querySelector(".p_discount").textContent = el.price - el.discount;
 
           let $clone = d.importNode($template, true);
           $fragment.appendChild($clone);
@@ -150,6 +157,9 @@ d.addEventListener("click", e => {
           $template.querySelector(".p_img").src = (el.url_image == "" || el.url_image === null) ? "./img/noimage.png" : el.url_image;
           $template.querySelector(".p_name").textContent = el.name;
           $template.querySelector(".p_price").textContent = el.price;
+          $template.querySelector(".p_price").style.textDecoration = (el.discount == 0) ? "" : "line-through"
+        
+          $template.querySelector(".p_discount").textContent = el.price - el.discount;
 
           let $clone = d.importNode($template, true);
           $fragment.appendChild($clone);
