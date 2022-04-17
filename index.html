@@ -25,10 +25,10 @@
 		<title>bs20 test</title>
 	</head>
 	<body>
-	<div class="backg"></div>
+		<div class="backg"></div>
 		<!-- Navbar - start -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid navcontainer">
 				<a class="navbar-brand" href="/">Bsales Test</a>
 				<button
 					class="navbar-toggler"
@@ -43,29 +43,30 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-					
-					<select class="form-select crud-select" aria-label="Default select example" style="width: auto; margin-right: 20px;">
+
+					<select
+						class="form-select crud-select"
+						aria-label="Default select example"
+					>
 						<option selected>Todos</option>
 						<!-- <div class="crud-select"> -->
 						<!-- <option value="1">One</option>
 						<option value="2">Two</option>
 						<option value="3">Three</option> -->
-					<!-- </div> -->
+						<!-- </div> -->
 					</select>
-					
+
 					<form class="d-flex crud-form">
 						<input
 							class="form-control me-2 searchbar"
 							type="search"
-							placeholder="Search"
+							placeholder="Search by product"
 							aria-label="Search"
 							name="sb"
 							value=""
 							required
 						/>
-						<button class="btn btn-outline-success" type="submit">
-							Search
-						</button>
+						<button class="btn btn-primary" type="submit">Search</button>
 					</form>
 				</div>
 			</div>
@@ -75,7 +76,9 @@
 		<!-- Sidebar - start -->
 		<div class="container-fluid">
 			<div class="row flex-nowrap">
-				<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark hiddenmobile">
+				<div
+					class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark hiddenmobile"
+				>
 					<div
 						class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
 					>
@@ -109,8 +112,22 @@
 								<span class="d-none d-sm-inline mx-1">Developer</span>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-								<li><a class="dropdown-item" href="https://github.com/storres20" target="_blank">Github</a></li>
-								<li><a class="dropdown-item" href="https://my-portfolio20.netlify.app/" target="_blank">Portfolio</a></li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://github.com/storres20"
+										target="_blank"
+										>Github</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://my-portfolio20.netlify.app/"
+										target="_blank"
+										>Portfolio</a
+									>
+								</li>
 								<li>
 									<hr class="dropdown-divider" />
 								</li>
@@ -119,10 +136,10 @@
 						</div>
 					</div>
 				</div>
-				<div id="loader" style="display:none;"></div>
+				<div id="loader" style="display: none"></div>
 				<div class="col py-3" id="crud-table">
 					<h1 class="titulofiltro">Todos los productos</h1>
-					<div class="crud-table animate-bottom" >
+					<div class="crud-table animate-bottom">
 						<!-- <div class="product">
 							<img
 								class="p_img"
@@ -147,7 +164,10 @@
 					>Regular: $
 					<p class="p_price"></p
 				></span>
-				<span class="p_span2">Online: $<p class="p_discount">100</p></span>
+				<span class="p_span2"
+					>Online: $
+					<p class="p_discount">100</p></span
+				>
 			</div>
 		</template>
 		<!-- Template - end -->
@@ -162,7 +182,7 @@
 			</li>
 		</template>
 		<!-- Template sidebar - end -->
-		
+
 		<!-- Template select - start -->
 		<template id="select-template">
 			<option value="1" class="sel_name">One</option>
@@ -170,7 +190,11 @@
 		<!-- Template select - end -->
 
 		<!-- Jquery CDN -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
 		<!-- Bootstrap CDN -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
