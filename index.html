@@ -27,9 +27,17 @@
 	<body>
 		<div class="backg"></div>
 		<!-- Navbar - start -->
+		<!-- * Nombre de Empresa
+				 * Select-option
+				 * Search bar
+				 * Extra: Responsive Desktop - Mobile
+				 * Extra: Bootstrap 5
+		-->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid navcontainer">
-				<a class="navbar-brand" href="/">Bsales Test</a>
+				<!-- * Nombre de Empresa -->
+				<a class="navbar-brand" href="/">Bsale Test</a>
+				<!-- * Nombre de Empresa -->
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -44,18 +52,22 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
+					<!-- * Select-option -->
 					<select
 						class="form-select crud-select"
 						aria-label="Default select example"
 					>
 						<option selected>Todos</option>
+						<!-- Aqui ira ubicado el TEMPLATE para el SELECT con los nombres de las CATEGORIAS -->
 						<!-- <div class="crud-select"> -->
 						<!-- <option value="1">One</option>
 						<option value="2">Two</option>
 						<option value="3">Three</option> -->
 						<!-- </div> -->
 					</select>
+					<!-- * Select-option -->
 
+					<!-- * Search bar -->
 					<form class="d-flex crud-form">
 						<input
 							class="form-control me-2 searchbar"
@@ -68,12 +80,18 @@
 						/>
 						<button class="btn btn-primary" type="submit">Search</button>
 					</form>
+					<!-- * Search bar -->
 				</div>
 			</div>
 		</nav>
 		<!-- Navbar - end -->
 
 		<!-- Sidebar - start -->
+		<!-- * Sidebar lateral izquierdo
+				 * Por medio de TEMPLATE se va a mapear con las CATEGORIAS de los productos
+				 * Previo pedido inicial a la API
+				 * Las CATEGORIAS se encuentra en la tabla "category" en la base de datos
+		-->
 		<div class="container-fluid">
 			<div class="row flex-nowrap">
 				<div
@@ -86,6 +104,7 @@
 							class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start crud-sidebar"
 							id="menu"
 						>
+							<!-- Aqui ira ubicado el TEMPLATE para el SIDEBAR con los nombres de las CATEGORIAS -->
 							<!-- <li class="nav-item">
 								<a href="#" class="nav-link align-middle px-0">
 									<i class="fs-4 bi-house"></i>
@@ -94,6 +113,12 @@
 							</li> -->
 						</ul>
 						<hr />
+						
+						<!-- * Opcional
+								 * Contiene informacion del Developer
+								 * Link de Github
+								 * Link de Portfolio
+						-->
 						<div class="dropdown pb-4">
 							<a
 								href="#"
@@ -134,12 +159,27 @@
 								<li><a class="dropdown-item" href="/">Home</a></li>
 							</ul>
 						</div>
+						<!-- * Opcional -->
 					</div>
 				</div>
+				
+				<!-- * Loader
+						 * Animation por medio de CSS
+						 * Se muestra mientras se esta consultando a la API para adquirir los datos solicitados a la Base de datos
+				-->
 				<div id="loader" style="display: none"></div>
+				<!-- * Loader -->
+				
+				<!-- * Division para llenado de PRODUCTOS
+						 * Los PRODUCTOS consultados a la API seran mostrados en este lugar
+						 * Todos los productos
+						 * Productos filtrados por categorias desde el SIDEBAR o SELECT-OPTION del navbar
+						 * Productos filtrados por nombre desde el SEARCHBAR del navbar
+				-->
 				<div class="col py-3" id="crud-table">
 					<h1 class="titulofiltro">Todos los productos</h1>
 					<div class="crud-table animate-bottom">
+						<!-- Aqui ira ubicado el TEMPLATE para los PRODUCTOS -->
 						<!-- <div class="product">
 							<img
 								class="p_img"
@@ -151,11 +191,14 @@
 						</div> -->
 					</div>
 				</div>
+				<!-- * Division para llenado de PRODUCTOS -->
 			</div>
 		</div>
 		<!-- Sidebar - end -->
 
 		<!-- Template - start -->
+		<!-- * Template para el llenado de PRODUCTOS
+		-->
 		<template id="crud-template">
 			<div class="product">
 				<img class="p_img" src="" alt="product_image" />
@@ -173,6 +216,8 @@
 		<!-- Template - end -->
 
 		<!-- Template sidebar - start -->
+		<!-- * Template para el llenado de CATEGORIAS en el SIDEBAR
+		-->
 		<template id="sidebar-template">
 			<li class="nav-item s_li">
 				<a href="#" class="nav-link align-middle px-0">
@@ -184,6 +229,8 @@
 		<!-- Template sidebar - end -->
 
 		<!-- Template select - start -->
+		<!-- * Template para el llenado de CATEGORIAS en el SELECT-OPTION del navbar
+		-->
 		<template id="select-template">
 			<option value="1" class="sel_name">One</option>
 		</template>
