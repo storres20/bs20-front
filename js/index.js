@@ -24,7 +24,7 @@ const d = document,
 /**
    * Por medio de AXIOS se interactua con la API del backend para consulta de informacion de la base de datos
    */
-const getAll = () => {
+const getAllProduct = () => {
 
   //Loader On
   document.getElementById("loader").style.display = "block";
@@ -32,6 +32,7 @@ const getAll = () => {
   document.querySelector("body").style.pointerEvents = "none";
 
   document.querySelector(".titulofiltro").style.marginTop = "0px";
+
 
   // AXIOS - Get all data from "product table" and render in "front"
   /**
@@ -78,6 +79,17 @@ const getAll = () => {
       document.querySelector("body").style.pointerEvents = "visible";
     });
 
+}
+
+const getAllCategory = () => {
+
+  //Loader On
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("crud-table").style.display = "none";
+  document.querySelector("body").style.pointerEvents = "none";
+
+  document.querySelector(".titulofiltro").style.marginTop = "0px";
+
 
   // AXIOS - Get all data from "category table" and render in "sidebar left"
   /**
@@ -115,6 +127,17 @@ const getAll = () => {
       document.getElementById("crud-table").style.display = "block";
       document.querySelector("body").style.pointerEvents = "visible";
     });
+
+}
+
+const getAllSelect = () => {
+
+  //Loader On
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("crud-table").style.display = "none";
+  document.querySelector("body").style.pointerEvents = "none";
+
+  document.querySelector(".titulofiltro").style.marginTop = "0px";
 
 
   // AXIOS - Get all data from "category table" and render in "navbar select-option"
@@ -154,9 +177,13 @@ const getAll = () => {
       document.getElementById("crud-table").style.display = "block";
       document.querySelector("body").style.pointerEvents = "visible";
     });
+
 }
 
-d.addEventListener("DOMContentLoaded", getAll);
+d.addEventListener("DOMContentLoaded", getAllProduct);
+d.addEventListener("DOMContentLoaded", getAllCategory);
+d.addEventListener("DOMContentLoaded", getAllSelect);
+
 
 // SEARCH BAR
 /**
@@ -231,7 +258,12 @@ d.addEventListener("submit", e => {
   }
 })
 
+
 // CLICK ON CATEGORIES
+/**
+ * Filtra los productos en base al nombre de la CATEGORIA seleccionada desde el SIDEBAR LEFT y los muestra en pantalla.
+ * @param {string} el valor seleccionado de la CATEGORIA del "SIDEBAR LEFT" es enviado por AXIOS al Backend para el filtrado
+ */
 d.addEventListener("click", e => {
   if (e.target.matches(".s_name")) {
     console.log(e.target.dataset.id);
@@ -301,74 +333,26 @@ d.addEventListener("click", e => {
 })
 
 
-
-$('.crud-select').on('change', function() {
+// CLICK ON SELECT-OPTION
+/**
+ * Filtra los productos en base al nombre de la CATEGORIA seleccionada desde el SELECT-OPTION del navbar y los muestra en pantalla.
+ * @param {string} el valor seleccionado de la CATEGORIA del "SELECT-OPTION" es enviado por AXIOS al Backend para el filtrado
+ */
+$('.crud-select').on('change', function () {
   var value = $(this).val();
   console.log(value);
-  var txt = $( ".crud-select option:selected" ).text();
   
+  var txt = $(".crud-select option:selected").text();
+  console.log(txt);
+
   if (txt == "Todos") {
-    
-    /*  */
-    
-    //Loader On
-  document.getElementById("loader").style.display = "block";
-  document.getElementById("crud-table").style.display = "none";
-  document.querySelector("body").style.pointerEvents = "none";
 
-  document.querySelector(".titulofiltro").style.marginTop = "0px";
+    getAllProduct();
 
-  // AXIOS - Get all data from "product table" and render in "front"
-  /**
-   * En el front, se cargan los PRODUCTOS
-   */
-  axios.get(API_URL_PRODUCTS)
-    .then(function (response) {
-      console.log(response.data);
-      let data = response.data;
-
-      data.forEach(el => {
-        $template.querySelector(".p_img").src = (el.url_image == "" || el.url_image === null) ? "./img/noimage.png" : el.url_image;
-        $template.querySelector(".p_name").textContent = el.name;
-        $template.querySelector(".p_price").textContent = el.price;
-        $template.querySelector(".p_price").style.textDecoration = (el.discount == 0) ? "" : "line-through"
-
-        $template.querySelector(".p_discount").textContent = el.price - el.discount;
-
-        let $clone = d.importNode($template, true);
-        $fragment.appendChild($clone);
-      });
-
-      $table.appendChild($fragment);
-
-      //Loader Off
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("crud-table").style.display = "block";
-      document.querySelector("body").style.pointerEvents = "visible";
-
-    })
-    .catch(function (error) {
-      console.log(error);
-      //Clean all
-      $table.innerHTML = "";
-
-      if (error.response.status == 500) {
-        document.querySelector(".titulofiltro").textContent = error.response.data.message;
-        document.querySelector(".titulofiltro").style.marginTop = "30px";
-      }
-
-      //Loader Off
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("crud-table").style.display = "block";
-      document.querySelector("body").style.pointerEvents = "visible";
-    });
-    
-    /*  */
-    
-    d.addEventListener("DOMContentLoaded", getAll);
+    d.addEventListener("DOMContentLoaded", getAllProduct);
   }
-  else{
-  
+  else {
+
     //Filter title
     document.querySelector(".searchbar").value = "";
     document.querySelector(".titulofiltro").innerHTML = `<u>Filtrado por:</u> ` + txt;
@@ -407,7 +391,6 @@ $('.crud-select').on('change', function() {
         document.getElementById("crud-table").style.display = "block";
         document.querySelector("body").style.pointerEvents = "visible";
 
-
       })
       .catch(function (error) {
         console.log(error);
@@ -428,7 +411,7 @@ $('.crud-select').on('change', function() {
         document.getElementById("crud-table").style.display = "block";
         document.querySelector("body").style.pointerEvents = "visible";
       });
-  
+
   }
 });
 
