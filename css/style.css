@@ -1,18 +1,16 @@
 /* Google Fonts - start */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&display=swap");
 /* Google Fonts - end */
 
 body {
-	font-family: 'Nunito Sans', sans-serif !important;
+	font-family: "Nunito Sans", sans-serif !important;
 }
-
 
 /* Titulo "Resultado de Busqueda" - start */
 .titulofiltro {
 	text-align: center;
 }
 /* Titulo "Resultado de Busqueda" - end */
-
 
 /* Template - Products - start */
 .crud-table {
@@ -48,7 +46,7 @@ body {
 
 	display: flex;
 	align-items: center;
-	
+
 	text-transform: uppercase;
 }
 
@@ -69,7 +67,6 @@ body {
 }
 /* Template - Products - end */
 
-
 /* Template - Sidebar Category - start */
 .s_name {
 	text-transform: capitalize;
@@ -80,13 +77,31 @@ body {
 }
 /* Template - Sidebar Category - end */
 
-
+/* Template - Select Category - start */
+.crud-select {
+	width: auto;
+	margin-right: 60px;
+}
+/* Template - Select Category - end */
 
 /* Hide SideBar Left in mobile view - start */
 @media (max-width: 600px) {
 	.hiddenmobile {
 		display: none;
 	}
-}
-/* Hide SideBar Left in mobile view - start */
 
+	/* BSALE TEST */
+	.navcontainer {
+		margin-left: 0;
+	}
+}
+/* Hide SideBar Left in mobile view - end */
+
+/* Desktop - start */
+@media (min-width: 601px) {
+	/* BSALE TEST */
+	.navcontainer {
+		margin-left: 16px !important;
+	}
+}
+/* Desktop - end */
