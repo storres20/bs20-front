@@ -1,7 +1,9 @@
 //URL API products
-const API_URL_PRODUCTS = 'http://localhost:8080/api/products';
+//const API_URL_PRODUCTS = 'http://localhost:8080/api/products'; //local connection
+const API_URL_PRODUCTS = 'https://bs20-back.vercel.app/api/products'; //deploy
 //URL API categories
-const API_URL_CATEGORIES = 'http://localhost:8080/api/categories';
+//const API_URL_CATEGORIES = 'http://localhost:8080/api/categories'; //local connection
+const API_URL_CATEGORIES = 'https://bs20-back.vercel.app/api/categories'; //deploy
 
 //DOM
 const d = document,
