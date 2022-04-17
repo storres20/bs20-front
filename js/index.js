@@ -166,6 +166,7 @@ d.addEventListener("click", e => {
     console.log(e.target.dataset.name);
 
     //Filter title
+    document.querySelector(".searchbar").value = "";
     document.querySelector(".titulofiltro").innerHTML = `<u>Filtrado por:</u> ` + e.target.dataset.name;
 
     //Loader On
