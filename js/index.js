@@ -21,6 +21,8 @@ const getAll = () => {
   document.getElementById("loader").style.display = "block";
   document.getElementById("crud-table").style.display = "none";
   document.querySelector("body").style.pointerEvents = "none";
+  
+  document.querySelector(".titulofiltro").style.marginTop = "0px";
 
   // AXIOS - Get all data from product table and render in front
   axios.get(API_URL_PRODUCTS)
@@ -50,6 +52,18 @@ const getAll = () => {
     })
     .catch(function (error) {
       console.log(error);
+      //Clean all
+      $table.innerHTML = "";
+
+      if (error.response.status == 500) {
+        document.querySelector(".titulofiltro").textContent = error.response.data.message;
+        document.querySelector(".titulofiltro").style.marginTop = "30px";
+      }
+
+      //Loader Off
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("crud-table").style.display = "block";
+      document.querySelector("body").style.pointerEvents = "visible";
     });
 
 
@@ -78,6 +92,7 @@ const getAll = () => {
 
       if (error.response.status == 500) {
         document.querySelector(".titulofiltro").textContent = error.response.data.message;
+        document.querySelector(".titulofiltro").style.marginTop = "30px";
       }
 
       //Loader Off
@@ -101,6 +116,7 @@ d.addEventListener("submit", e => {
 
     //Filter title
     document.querySelector(".titulofiltro").textContent = "Resultado de Busqueda";
+    document.querySelector(".titulofiltro").style.marginTop = "0px";
 
     //Loader On
     document.getElementById("loader").style.display = "block";
@@ -145,9 +161,11 @@ d.addEventListener("submit", e => {
 
         if (error.response.status == 404) {
           document.querySelector(".titulofiltro").textContent = error.response.data.message;
+          document.querySelector(".titulofiltro").style.marginTop = "30px";
         }
         else if (error.response.status == 500) {
           document.querySelector(".titulofiltro").textContent = error.response.data.message;
+          document.querySelector(".titulofiltro").style.marginTop = "30px";
         }
 
         //Loader Off
@@ -168,6 +186,7 @@ d.addEventListener("click", e => {
     //Filter title
     document.querySelector(".searchbar").value = "";
     document.querySelector(".titulofiltro").innerHTML = `<u>Filtrado por:</u> ` + e.target.dataset.name;
+    document.querySelector(".titulofiltro").style.marginTop = "0px";
 
     //Loader On
     document.getElementById("loader").style.display = "block";
@@ -211,9 +230,11 @@ d.addEventListener("click", e => {
 
         if (error.response.status == 404) {
           document.querySelector(".titulofiltro").textContent = error.response.data.message;
+          document.querySelector(".titulofiltro").style.marginTop = "30px";
         }
         else if (error.response.status == 500) {
           document.querySelector(".titulofiltro").textContent = error.response.data.message;
+          document.querySelector(".titulofiltro").style.marginTop = "30px";
         }
 
         //Loader Off
