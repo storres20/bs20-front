@@ -79,7 +79,7 @@ body {
 
 /* Template - Select Category - start */
 .crud-select {
-	width: auto;
+	width: auto !important;
 	margin-right: 60px;
 }
 /* Template - Select Category - end */
