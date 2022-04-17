@@ -28,7 +28,7 @@ const getAllProduct = () => {
 
   //Clean all
   $table.innerHTML = "";
-    
+
   //Filter title
   document.querySelector(".titulofiltro").textContent = "Todos los productos";
   document.querySelector(".titulofiltro").style.marginTop = "0px";
@@ -361,7 +361,7 @@ d.addEventListener("click", e => {
 $('.crud-select').on('change', function () {
   var value = $(this).val();
   console.log(value);
-  
+
   var txt = $(".crud-select option:selected").text();
   console.log(txt);
 
