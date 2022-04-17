@@ -20,7 +20,7 @@ const d = document,
 
   $fragment = d.createDocumentFragment();
 
-// GET ALL DATA
+// GET ALL DATA - PRODUCTS
 /**
    * Por medio de AXIOS se interactua con la API del backend para consulta de informacion de la base de datos
    */
@@ -43,6 +43,9 @@ const getAllProduct = () => {
       console.log(response.data);
       let data = response.data;
 
+      /**
+      * Mapeado de la data que proviene de la API y se muestran los PRODUCTOS
+      */
       data.forEach(el => {
         $template.querySelector(".p_img").src = (el.url_image == "" || el.url_image === null) ? "./img/noimage.png" : el.url_image;
         $template.querySelector(".p_name").textContent = el.name;
@@ -81,6 +84,11 @@ const getAllProduct = () => {
 
 }
 
+
+// GET ALL DATA - CATEGORIES - SIDEBAR LEFT
+/**
+   * Por medio de AXIOS se interactua con la API del backend para consulta de informacion de la base de datos
+   */
 const getAllCategory = () => {
 
   //Loader On
@@ -130,6 +138,11 @@ const getAllCategory = () => {
 
 }
 
+
+// GET ALL DATA - CATEGORIES - SELECT-OPTION
+/**
+   * Por medio de AXIOS se interactua con la API del backend para consulta de informacion de la base de datos
+   */
 const getAllSelect = () => {
 
   //Loader On
