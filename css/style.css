@@ -72,8 +72,8 @@ body {
 	text-transform: capitalize;
 }
 
-.s_name:hover {
-	color: white;
+.s_color:hover {
+	color: white !important;
 }
 /* Template - Sidebar Category - end */
 
