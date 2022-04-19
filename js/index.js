@@ -295,6 +295,9 @@ d.addEventListener("click", e => {
     document.querySelector(".searchbar").value = "";
     document.querySelector(".titulofiltro").innerHTML = `<u>Filtrado por:</u> ` + e.target.dataset.name;
     document.querySelector(".titulofiltro").style.marginTop = "0px";
+    
+    //Reset Select-option
+    document.querySelector(".crud-select").selectedIndex = null;
 
     //Loader On
     document.getElementById("loader").style.display = "block";
