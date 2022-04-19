@@ -9,6 +9,7 @@ body {
 /* Titulo "Resultado de Busqueda" - start */
 .titulofiltro {
 	text-align: center;
+	margin-bottom: 16px;
 }
 /* Titulo "Resultado de Busqueda" - end */
 
@@ -94,6 +95,12 @@ body {
 	.navcontainer {
 		margin-left: 0;
 	}
+
+	/* Template - Select Category - start */
+	.crud-select {
+		margin-bottom: 8px;
+	}
+	/* Template - Select Category - end */
 }
 /* Hide SideBar Left in mobile view - end */
 
