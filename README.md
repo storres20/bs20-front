@@ -169,7 +169,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
 *  Finalmente, los **"productos"** filtrados por la **"categoria"** seleccionada, son renderizados en el frontend
 
 
-<p align="center"><img src="./img/Readme/todosproductos.png"/></p> 
+<p align="center"><img src="./img/Readme/piscoproductos.png"/></p> 
 
 
 
