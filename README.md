@@ -283,6 +283,22 @@ Al ingresar un **"nombre"** en el "buscador" o "search bar" del Navbar y dar cli
 <p align="center"><img src="./img/Readme/enerproductos.png"/></p>
 
 
+<h1 align="center">📌Errores</h1>
+
+`1er Error:` Se da cuando el nombre ingresado por medio del "buscador" o "search bar" del Navbar, no coincide con algun nombre de un producto de la Base de datos
+`Solucion:` Intentar con ingresar otro nombre
+
+<p align="center"><img src="./img/Readme/error1.png"/></p>
+
+`2do Error:` Se da cuando se interrumpe la conexion de internet o cuando no hay conexion con el servidor
+`Solucion:` Recargar la pagina web o reiniciar la conexion a internet
+
+<p align="center"><img src="./img/Readme/error2.png"/></p>
+
+
+
+
+
 
 La Aplicacion se enlaza a una API de peliculas y en la pagina principal se visualizan las mismas en "carrousel de imagenes". 
 Ademas, al dar click en las imagenes, se carga una pagina adicional en donde se visualiza mas detalles **(Title, Genres, Description)** provenientes de la API
