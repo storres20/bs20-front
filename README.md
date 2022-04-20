@@ -71,6 +71,8 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
 ```
 *  Finalmente, los **"productos"** son renderizados en el frontend
 
+<p align="center"><img src="./img/Readme/todosproductos.png"/></p> 
+
 <h3>GET lista de "categorias"</h3>
 
 * **GET** /api/categories retornara todas las **"categorias"**
@@ -102,6 +104,8 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
 `Nota:` Estos numeros estan relacionados con cada **"categoria"** obtenida.
 
 `Nota:` Esto servirá para realizar el filtrado de los "productos" y ordenarlos por "categorias"
+
+<p align="center"><img src="./img/Readme/sidebar-select.png"/></p> 
 
 
 <h2 align="center">📌Filtro de productos desde el "SideBar"</h2>
