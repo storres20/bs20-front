@@ -29,43 +29,79 @@ Puede ser accedido a traves de: <a href="https://bs20-front.netlify.app/" target
 <h2 align="center">Vista de Escritorio</h2>
 <img src="./img/Readme/vistaescritorio.png" />
 
-Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, desde el lado del cliente se realizarán **02 peticiones** a la **API del backend** para solicitar los datos de los "productos" y los datos de las "categorias"
+Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, desde el lado del cliente se realizarán **02 peticiones** a la **API del backend** para solicitar los datos de los **"productos"** y los datos de las **"categorias"**
 
 `Nota:` La ruta del **API del backend** es: <a href="https://bs20-back.vercel.app/" target="_blank">https://bs20-back.vercel.app/</a>
 
 <h3>GET lista de "productos"</h3>
 
-* **GET** /api/products retornara todos los **productos**
+* **GET** /api/products retornara todos los **"productos"**
 * Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products
-* En respuesta se obtiene todos **productos**
-
-
-<div class="table-wrapper" markdown="block">
-
-|                        |ODBC | SSMS | SQLCMD | ISQL|
-|---                     |:---:|:---: |:---:   |:---:|
-|ANSI_NULL_DFLT_ON       | ON  | ON   | ON     | OFF |
-|ANSI_NULLS              | ON  | ON   | ON     | OFF |
-
-</div>
-
-
+* En respuesta se obtiene todos los **"productos"**
+* De momento, un total de 57 productos
 
 ```json
-{
-   "quantity": 60.36,
-   "quantityReserved": 0.0,
-   "quantityAvailable": 60.36,
-   "variant": {
-       "href": "https://api.bsale.cl/v1/variants/351.json",
-       "id": "351"
+[
+   {
+      "id": 53,
+      "name": "Mani Sin Sal",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/manisinsalmp6988.jpg",
+      "price": 500,
+      "discount": 0,
+      "category": 5
    },
-   "office": {
-       "href": "https://api.bsale.cl/v1/offices/2.json",
-       "id": "2"
+   {
+      "id": 55,
+      "name": "Papas Fritas Bolsa Pequeña",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/papaslisas7271.jpg",
+      "price": 500,
+      "discount": 0,
+      "category": 5
+   },
+   ...
+   {
+      "id": 33,
+      "name": "RON PAMPERO ANIVERSARIO",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/ron_pampero_aniversario0311.jpg",
+      "price": 20000,
+      "discount": 15,
+      "category": 3
    }
-}
+]
 ```
+*  Finalmente, los **"productos"** son renderizados en el frontend
+
+<h3>GET lista de "categorias"</h3>
+
+* **GET** /api/categories retornara todas las **"categorias"**
+* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/categories
+* En respuesta se obtiene todas las **"categorias"**
+* De momento, un total de 7 categorias
+
+```json
+[
+   {
+      "id": 1,
+      "name": "bebida energetica"
+   },
+   {
+      "id": 2,
+      "name": "pisco"
+   },
+   ...
+   {
+      "id": 7,
+      "name": "vodka"
+   }
+]
+```
+*  Finalmente, las **"categorias"** son renderizadas en el "Sidebar" y en el "Select-option" del Navbar
+
+`Nota:` Cada **"producto"** tiene un campo de **"category"** con un numero asignado entre 1 y 7.
+
+`Nota:` Estos numeros estan relacionados con cada **"categoria"** obtenida.
+
+`Nota:` Esto servirá para realizar el filtrado de los "productos" y ordenarlos por "categorias"
 
 
 <h2 align="center">📌Filtro de productos desde el "SideBar"</h2>
