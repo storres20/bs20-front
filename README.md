@@ -5,13 +5,10 @@
 ### Tabla de contenidos:
 ---
 
-- [### Tabla de contenidos:](#-tabla-de-contenidos)
-- [### Descripción y contexto](#-descripción-y-contexto)
-- [### Guía de usuario](#-guía-de-usuario)
-- [### Guía de instalación](#-guía-de-instalación)
-- [### Información adicional](#-información-adicional)
-  - [🔭Skils:](#skils)
-  - [💻Pagina web: 📱](#pagina-web-)
+- [Descripción y contexto](#descripción-y-contexto)
+- [Guía de usuario](#guía-de-usuario)
+- [Guía de instalación](#guía-de-instalación)
+- [Información adicional](#información-adicional)
 
 
 ### Descripción y contexto
