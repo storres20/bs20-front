@@ -23,6 +23,14 @@ Constará con vista para celulares y para computadoras de escritorio.
 
 ### Guía de usuario
 ---
+
+<h2 align="center">Vista de Escritorio</h2>
+<img src="https://user-images.githubusercontent.com/81504385/164132662-2585fbaf-691a-40ef-b31f-8d9d23b96ce8.png"/>
+
+<h2 align="center">📌Filtro de productos desde el SideBar</h2>
+<p align="center"><img src="https://user-images.githubusercontent.com/81504385/164144563-aa73bebd-3200-4f4a-837f-e895eafbb4b6.gif"/></p> 
+
+
 La Aplicacion se enlaza a una API de peliculas y en la pagina principal se visualizan las mismas en "carrousel de imagenes". 
 Ademas, al dar click en las imagenes, se carga una pagina adicional en donde se visualiza mas detalles **(Title, Genres, Description)** provenientes de la API
 
