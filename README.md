@@ -27,12 +27,14 @@ Constará con vista para celulares y para computadoras de escritorio.
 <h2 align="center">Vista de Escritorio</h2>
 <img src="./img/Readme/vistaescritorio.png" />
 
-<h2 align="center">📌Filtro de productos desde el SideBar</h2>
+<h2 align="center">📌Filtro de productos desde el "SideBar"</h2>
 <p align="center"><img src="./img/Readme/sidebar.gif"/></p>
 
-<h2 align="center">📌Filtro de productos desde el Select-option del Navbar</h2>
-<p align="center"><img src="./img/Readme/select-option.gif"/></p> 
+<h2 align="center">📌Filtro de productos desde el "Select-option" del Navbar</h2>
+<p align="center"><img src="./img/Readme/select-option.gif"/></p>
 
+<h2 align="center">📌Filtro de productos desde el "Buscador" del Navbar</h2>
+<p align="center"><img src="./img/Readme/buscador.gif"/></p> 
 
 La Aplicacion se enlaza a una API de peliculas y en la pagina principal se visualizan las mismas en "carrousel de imagenes". 
 Ademas, al dar click en las imagenes, se carga una pagina adicional en donde se visualiza mas detalles **(Title, Genres, Description)** provenientes de la API
