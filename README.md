@@ -31,6 +31,10 @@ Puede ser accedido a traves de: <a href="https://bs20-front.netlify.app/" target
 
 Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, desde el lado del cliente se realizarán **02 peticiones** a la **API del backend** para solicitar los datos de los **"productos"** y los datos de las **"categorias"**
 
+`Nota:` Los **"productos"** estan alojados en la tabla "productos" de la base de datos suministrados por la empresa
+
+`Nota:` Las **"categorias"** estan alojadas en la tabla "categorias" de la base de datos suministrados por la empresa
+
 `Nota:` La ruta del **API del backend** es: <a href="https://bs20-back.vercel.app/" target="_blank">https://bs20-back.vercel.app/</a>
 
 <h3>GET lista de "productos"</h3>
@@ -69,9 +73,12 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
    }
 ]
 ```
+
 *  Finalmente, los **"productos"** son renderizados en el frontend
 
+
 <p align="center"><img src="./img/Readme/todosproductos.png"/></p> 
+
 
 <h3>GET lista de "categorias"</h3>
 
@@ -97,7 +104,9 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
    }
 ]
 ```
+
 *  Finalmente, las **"categorias"** son renderizadas en el "Sidebar" y en el "Select-option" del Navbar
+
 
 `Nota:` Cada **"producto"** tiene un campo de **"category"** con un numero asignado entre 1 y 7.
 
@@ -111,21 +120,59 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
 <h2 align="center">📌Filtro de productos desde el "SideBar"</h2>
 <p align="center"><img src="./img/Readme/sidebar.gif"/></p>
 
+Ahora veamos acerca del filtrado de **"productos"** por medio de las **"categorias"** en el "Sidebar"
+
+Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la **API del backend** para solicitar los datos de los **"productos"** filtrados por la **"categoria"** seleccionada
+
+<h3>GET lista de "productos" filtrado por "categorias"</h3>
+
+* **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
+* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/cat/:id
+* En respuesta se obtiene los **"productos"** filtrados por **"categoria"**
+
+`Nota:` En la URL https://bs20-back.vercel.app/api/products/cat/:id el valor de **":id"** debe ser reemplazado por el **"id"** de la **"categoria"** seleccionada
+
+`Nota:` Por ejemplo, si selecciono **"pisco"**, su **"id"** es **"2"**. Entonces la URL será https://bs20-back.vercel.app/api/products/cat/2
+
+`Nota:` Se obtendran los **"productos"** que tengan el campo **"category: 2"**
+
 ```json
-{
-   "quantity": 60.36,
-   "quantityReserved": 0.0,
-   "quantityAvailable": 60.36,
-   "variant": {
-       "href": "https://api.bsale.cl/v1/variants/351.json",
-       "id": "351"
+[
+   {
+      "id": 12,
+      "name": "PISCO CAMPANARIO 35º",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/campanario8845.jpg",
+      "price": 2990,
+      "discount": 20,
+      "category": 2
    },
-   "office": {
-       "href": "https://api.bsale.cl/v1/offices/2.json",
-       "id": "2"
+   {
+      "id": 10,
+      "name": "PISCO ARTESANOS 35º ",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/artesanos8818.jpg",
+      "price": 3990,
+      "discount": 0,
+      "category": 2
+   },
+   ...
+   {
+      "id": 91,
+      "name": "PISCO MISTRAL NOBEL 40°",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/nobel409551.jpg",
+      "price": 19990,
+      "discount": 0,
+      "category": 2
    }
-}
+]
 ```
+
+*  Finalmente, los **"productos"** filtrados por la **"categoria"** seleccionada, son renderizados en el frontend
+
+
+<p align="center"><img src="./img/Readme/todosproductos.png"/></p> 
+
+
+
 
 <h2 align="center">📌Filtro de productos desde el "Select-option" del Navbar</h2>
 <p align="center"><img src="./img/Readme/select-option.gif"/></p>
