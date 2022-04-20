@@ -1,14 +1,17 @@
 
 <h1 align="center">Bsale Test - Fronted</h1>
-<p align="center"><img src="https://user-images.githubusercontent.com/81504385/164132662-2585fbaf-691a-40ef-b31f-8d9d23b96ce8.png"/></p> 
+<p align="center"><img src="./img/Readme/vistaescritorio.png"/></p> 
 
 ### Tabla de contenidos:
 ---
 
-- [Descripción y contexto](#descripción-y-contexto)
-- [Guía de usuario](#guía-de-usuario)
-- [Guía de instalación](#guía-de-instalación)
-- [Información adicional](#información-adicional)
+- [### Tabla de contenidos:](#-tabla-de-contenidos)
+- [### Descripción y contexto](#-descripción-y-contexto)
+- [### Guía de usuario](#-guía-de-usuario)
+- [### Guía de instalación](#-guía-de-instalación)
+- [### Información adicional](#-información-adicional)
+  - [🔭Skils:](#skils)
+  - [💻Pagina web: 📱](#pagina-web-)
 
 
 ### Descripción y contexto
@@ -25,10 +28,13 @@ Constará con vista para celulares y para computadoras de escritorio.
 ---
 
 <h2 align="center">Vista de Escritorio</h2>
-<img src="https://user-images.githubusercontent.com/81504385/164132662-2585fbaf-691a-40ef-b31f-8d9d23b96ce8.png"/>
+<img src="./img/Readme/vistaescritorio.png" />
 
 <h2 align="center">📌Filtro de productos desde el SideBar</h2>
-<p align="center"><img src="https://user-images.githubusercontent.com/81504385/164144563-aa73bebd-3200-4f4a-837f-e895eafbb4b6.gif"/></p> 
+<p align="center"><img src="./img/Readme/sidebar.gif"/></p>
+
+<h2 align="center">📌Filtro de productos desde el Select-option del Navbar</h2>
+<p align="center"><img src="./img/Readme/select-option.gif"/></p> 
 
 
 La Aplicacion se enlaza a una API de peliculas y en la pagina principal se visualizan las mismas en "carrousel de imagenes". 
