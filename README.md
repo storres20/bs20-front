@@ -124,7 +124,7 @@ Ahora veamos acerca del filtrado de **"productos"** por medio de las **"categori
 
 Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la **API del backend** para solicitar los datos de los **"productos"** filtrados por la **"categoria"** seleccionada
 
-<h3>GET lista de "productos" filtrado por "categorias"</h3>
+<h3>GET lista de "productos" filtrado por "categorias" desde el "Sidebar"</h3>
 
 * **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
 * Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/cat/:id
@@ -169,13 +169,66 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
 *  Finalmente, los **"productos"** filtrados por la **"categoria"** seleccionada, son renderizados en el frontend
 
 
-<p align="center"><img src="./img/Readme/piscoproductos.png"/></p> 
-
+<p align="center"><img src="./img/Readme/piscoproductos.png"/></p>
 
 
 
 <h2 align="center">📌Filtro de productos desde el "Select-option" del Navbar</h2>
 <p align="center"><img src="./img/Readme/select-option.gif"/></p>
+
+Ahora veamos acerca del filtrado de **"productos"** por medio de las **"categorias"** en el "Select-option" del Navbar
+
+Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la **API del backend** para solicitar los datos de los **"productos"** filtrados por la **"categoria"** seleccionada
+
+<h3>GET lista de "productos" filtrado por "categorias" desde el "Select-option" del Navbar</h3>
+
+* **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
+* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/cat/:id
+* En respuesta se obtiene los **"productos"** filtrados por **"categoria"**
+
+`Nota:` En la URL https://bs20-back.vercel.app/api/products/cat/:id el valor de **":id"** debe ser reemplazado por el **"id"** de la **"categoria"** seleccionada
+
+`Nota:` Por ejemplo, si selecciono **"snack"**, su **"id"** es **"5"**. Entonces la URL será https://bs20-back.vercel.app/api/products/cat/5
+
+`Nota:` Se obtendran los **"productos"** que tengan el campo **"category: 5"**
+
+```json
+[
+   {
+      "id": 53,
+      "name": "Mani Sin Sal",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/manisinsalmp6988.jpg",
+      "price": 500,
+      "discount": 0,
+      "category": 5
+   },
+   {
+      "id": 55,
+      "name": "Papas Fritas Bolsa Pequeña",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/papaslisas7271.jpg",
+      "price": 500,
+      "discount": 0,
+      "category": 5
+   },
+   ...
+   {
+      "id": 56,
+      "name": "Papas Fritas Tarro",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/78028005335657432.jpg",
+      "price": 1990,
+      "discount": 0,
+      "category": 5
+   }
+]
+```
+
+*  Finalmente, los **"productos"** filtrados por la **"categoria"** seleccionada, son renderizados en el frontend
+
+
+<p align="center"><img src="./img/Readme/piscoproductos.png"/></p>
+
+
+
 
 <h2 align="center">📌Filtro de productos desde el "Buscador" del Navbar</h2>
 <p align="center"><img src="./img/Readme/buscador.gif"/></p> 
