@@ -112,3 +112,9 @@ body {
 	}
 }
 /* Desktop - end */
+
+/* Readme */
+.table-wrapper {
+  overflow-y: scroll;
+  height: 100px;
+}
