@@ -1,5 +1,5 @@
 
-<h1 align="center">Bsale Test - Fronted</h1>
+<h1 align="center">Bsale Test - Frontend</h1>
 <p align="center"><img src="./img/Readme/vistaescritorio.png"/></p> 
 
 ### Tabla de contenidos:
