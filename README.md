@@ -26,7 +26,7 @@ Puede ser accedido a traves de: <a href="https://bs20-front.netlify.app/" target
 ### Guía de usuario
 ---
 
-<h2 align="center">Vista de Escritorio</h2>
+<h1 align="center">Vista de Escritorio</h1>
 <img src="./img/Readme/vistaescritorio.png" />
 
 Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, desde el lado del cliente se realizarán **02 peticiones** a la **API del backend** para solicitar los datos de los **"productos"** y los datos de las **"categorias"**
@@ -37,7 +37,7 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
 
 `Nota:` La ruta del **API del backend** es: <a href="https://bs20-back.vercel.app/" target="_blank">https://bs20-back.vercel.app/</a>
 
-<h3>GET lista de "productos"</h3>
+<h1>GET lista de "productos"</h1>
 
 * **GET** /api/products retornara todos los **"productos"**
 * Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products
@@ -80,7 +80,7 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
 <p align="center"><img src="./img/Readme/todosproductos.png"/></p> 
 
 
-<h3>GET lista de "categorias"</h3>
+<h1>GET lista de "categorias"</h1>
 
 * **GET** /api/categories retornara todas las **"categorias"**
 * Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/categories
@@ -117,14 +117,14 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
 <p align="center"><img src="./img/Readme/sidebar-select.png"/></p> 
 
 
-<h2 align="center">📌Filtro de productos desde el "SideBar"</h2>
+<h1 align="center">📌Filtro de productos desde el "SideBar"</h1>
 <p align="center"><img src="./img/Readme/sidebar.gif"/></p>
 
 Ahora veamos acerca del filtrado de **"productos"** por medio de las **"categorias"** en el "Sidebar"
 
 Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la **API del backend** para solicitar los datos de los **"productos"** filtrados por la **"categoria"** seleccionada
 
-<h3>GET lista de "productos" filtrado por "categorias" desde el "Sidebar"</h3>
+<h1>GET lista de "productos" filtrado por "categorias" desde el "Sidebar"</h1>
 
 * **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
 * Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/cat/:id
@@ -173,14 +173,14 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
 
 
 
-<h2 align="center">📌Filtro de productos desde el "Select-option" del Navbar</h2>
+<h1 align="center">📌Filtro de productos desde el "Select-option" del Navbar</h1>
 <p align="center"><img src="./img/Readme/select-option.gif"/></p>
 
 Ahora veamos acerca del filtrado de **"productos"** por medio de las **"categorias"** en el "Select-option" del Navbar
 
 Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la **API del backend** para solicitar los datos de los **"productos"** filtrados por la **"categoria"** seleccionada
 
-<h3>GET lista de "productos" filtrado por "categorias" desde el "Select-option" del Navbar</h3>
+<h1>GET lista de "productos" filtrado por "categorias" desde el "Select-option" del Navbar</h1>
 
 * **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
 * Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/cat/:id
@@ -228,10 +228,77 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
 <p align="center"><img src="./img/Readme/snackproductos.png"/></p>
 
 
-
-
-<h2 align="center">📌Filtro de productos desde el "Buscador" del Navbar</h2>
+<h1 align="center">📌Filtro de productos desde el "Buscador" del Navbar</h1>
 <p align="center"><img src="./img/Readme/buscador.gif"/></p> 
+
+Ahora veamos acerca del filtrado de **"productos"** por medio de los **"nombres"** de producto desde el "buscador" o "search bar" del Navbar
+
+Al ingresar un **"nombre"** en el "buscador" o "search bar" del Navbar y dar click sobre el boton "search" o presionar "Enter", se enviará **01 peticion** a la **API del backend** para solicitar los datos de los **"productos"** filtrados por el **"nombre"** ingresado
+
+<h1>GET lista de "productos" filtrado por "nombre" desde el "buscador" o "search bar" del Navbar</h1>
+
+* **GET** /api/products/search/:id retornara los **"productos"** filtrados por **"nombre"** ingresado
+* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/search/:name
+* En respuesta se obtiene los **"productos"** filtrados por **"nombre"**
+
+`Nota:` En la URL https://bs20-back.vercel.app/api/products/search/:name el valor de **":name"** debe ser reemplazado por el **"nombre"** ingresado en el "buscador" o "search bar" del Navbar
+
+`Nota:` Por ejemplo, si selecciono **"ener"**, su **"name"** es **"ener"**. Entonces la URL será https://bs20-back.vercel.app/api/products/search/ener
+
+`Nota:` Se obtendran los **"productos"** que contengan la palabra **"ener"** en el campo **"name"** de cada producto
+
+```json
+[
+   {
+      "id": 35,
+      "name": "ENERGETICA MAKKA DRINKS",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/makka-drinks-250ml0455.jpg",
+      "price": 1190,
+      "discount": 0,
+      "category": 1
+   },
+   {
+      "id": 7,
+      "name": "ENERGETICA SCORE",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/logo7698.png",
+      "price": 1290,
+      "discount": 0,
+      "category": 1
+   },
+   ...
+   {
+      "id": 79,
+      "name": "ENERGETICA MONSTER VERDE",
+      "url_image": "",
+      "price": 1990,
+      "discount": 0,
+      "category": 1
+   }
+]
+```
+
+*  Finalmente, los **"productos"** filtrados por el nombre **"ener"** ingresado, son renderizados en el frontend
+
+
+<p align="center"><img src="./img/Readme/enerproductos.png"/></p>
+
+
+<h1 align="center">📌Errores</h1>
+
+`1er Error:` Se da cuando el nombre ingresado por medio del "buscador" o "search bar" del Navbar, no coincide con algun nombre de un producto de la Base de datos
+`Solucion:` Intentar con ingresar otro nombre
+
+<p align="center"><img src="./img/Readme/error1.png"/></p>
+
+`2do Error:` Se da cuando se interrumpe la conexion de internet o cuando no hay conexion con el servidor
+`Solucion:` Recargar la pagina web o reiniciar la conexion a internet
+
+<p align="center"><img src="./img/Readme/error2.png"/></p>
+
+
+
+
+
 
 La Aplicacion se enlaza a una API de peliculas y en la pagina principal se visualizan las mismas en "carrousel de imagenes". 
 Ademas, al dar click en las imagenes, se carga una pagina adicional en donde se visualiza mas detalles **(Title, Genres, Description)** provenientes de la API
