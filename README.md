@@ -138,11 +138,11 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
 
 <h1>GET lista de "productos" filtrado por "categorias" desde el "Sidebar"</h1>
 
-* **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
-* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/cat/:id
+* **GET** /api/products/cat/:cat retornara los **"productos"** filtrados por la **"categoria"** seleccionada
+* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: `https://bs20-back.vercel.app/api/products/cat/:cat`
 * En respuesta se obtiene los **"productos"** filtrados por **"categoria"**
 
-`Nota:` En la URL https://bs20-back.vercel.app/api/products/cat/:id el valor de **":id"** debe ser reemplazado por el **"id"** de la **"categoria"** seleccionada
+`Nota:` En la URL `https://bs20-back.vercel.app/api/products/cat/:cat` el valor de **":cat"** debe ser reemplazado por el **"id"** de la **"categoria"** seleccionada
 
 `Nota:` Por ejemplo, si selecciono **"pisco"**, su **"id"** es **"2"**. Entonces la URL será https://bs20-back.vercel.app/api/products/cat/2
 
@@ -195,10 +195,10 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
 <h1>GET lista de "productos" filtrado por "categorias" desde el "Select-option" del Navbar</h1>
 
 * **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
-* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/cat/:id
+* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: `https://bs20-back.vercel.app/api/products/cat/:cat`
 * En respuesta se obtiene los **"productos"** filtrados por **"categoria"**
 
-`Nota:` En la URL https://bs20-back.vercel.app/api/products/cat/:id el valor de **":id"** debe ser reemplazado por el **"id"** de la **"categoria"** seleccionada
+`Nota:` En la URL `https://bs20-back.vercel.app/api/products/cat/:cat` el valor de **":cat"** debe ser reemplazado por el **"id"** de la **"categoria"** seleccionada
 
 `Nota:` Por ejemplo, si selecciono **"snack"**, su **"id"** es **"5"**. Entonces la URL será https://bs20-back.vercel.app/api/products/cat/5
 
@@ -250,13 +250,13 @@ Al ingresar un **"nombre"** en el "buscador" o "search bar" del Navbar y dar cli
 
 <h1>GET lista de "productos" filtrado por "nombre" desde el "buscador" o "search bar" del Navbar</h1>
 
-* **GET** /api/products/search/:id retornara los **"productos"** filtrados por **"nombre"** ingresado
-* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: https://bs20-back.vercel.app/api/products/search/:name
+* **GET** /api/products/search/:text retornara los **"productos"** filtrados por **"nombre"** ingresado
+* Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: `https://bs20-back.vercel.app/api/products/search/:text`
 * En respuesta se obtiene los **"productos"** filtrados por **"nombre"**
 
-`Nota:` En la URL https://bs20-back.vercel.app/api/products/search/:name el valor de **":name"** debe ser reemplazado por el **"nombre"** ingresado en el "buscador" o "search bar" del Navbar
+`Nota:` En la URL `https://bs20-back.vercel.app/api/products/search/:text` el valor de **":text"** debe ser reemplazado por el "nombre" ingresado en el "buscador" o "search bar" del Navbar
 
-`Nota:` Por ejemplo, si selecciono **"ener"**, su **"name"** es **"ener"**. Entonces la URL será https://bs20-back.vercel.app/api/products/search/ener
+`Nota:` Por ejemplo, si selecciono **"ener"**, entonces **":text"** es reemplazado por **"ener"**. Entonces la URL será https://bs20-back.vercel.app/api/products/search/ener
 
 `Nota:` Se obtendran los **"productos"** que contengan la palabra **"ener"** en el campo **"name"** de cada producto
 
