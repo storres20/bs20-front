@@ -194,7 +194,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
 
 <h1>GET lista de "productos" filtrado por "categorias" desde el "Select-option" del Navbar</h1>
 
-* **GET** /api/products/cat/:id retornara los **"productos"** filtrados por la **"categoria"** seleccionada
+* **GET** /api/products/cat/:cat retornara los **"productos"** filtrados por la **"categoria"** seleccionada
 * Por medio de **AXIOS** se envia la solicitud GET a la API por medio de la URL: `https://bs20-back.vercel.app/api/products/cat/:cat`
 * En respuesta se obtiene los **"productos"** filtrados por **"categoria"**
 
