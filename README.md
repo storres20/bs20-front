@@ -89,6 +89,37 @@ Al iniciar la plataforma web de 🛍 🛒 **Bsale Test - Frontend** 🛍 🛒, d
 
 <p align="center"><img src="./img/Readme/todosproductos.png"/></p> 
 
+`Nota:`
+* Se identificó que el campo "url_image" de algunos productos se encontraban vacios `""` o con el valor `null`
+
+```json
+[
+   ...
+   {
+      "id": 98,
+      "name": "Cerveza Escudo Normal LATA 350CC",
+      `"url_image": "",`
+      "price": 600,
+      "discount": 0,
+      "category": 6
+   },
+   ...
+   {
+      "id": 68,
+      "name": "Bebida Sprite 1 Lt",
+      `"url_image": null,`
+      "price": 1250,
+      "discount": 10,
+      "category": 4
+   },
+   ...
+]
+```
+
+* En estos casos durante el renderizado en el Frontend, se agregó un condicional para estos casos
+* Se asignó una imagen local llamada `Imagen no disponible`
+
+<p align="center"><img src="./img/noimage.png" width="200"/></p> 
 
 ## Categorias
 <h1>GET lista de "categorias"</h1>
@@ -156,7 +187,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/campanario8845.jpg",
       "price": 2990,
       "discount": 20,
-      "category": 2
+      `"category": 2`
    },
    {
       "id": 10,
@@ -164,7 +195,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/artesanos8818.jpg",
       "price": 3990,
       "discount": 0,
-      "category": 2
+      `"category": 2`
    },
    ...
    {
@@ -173,7 +204,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/nobel409551.jpg",
       "price": 19990,
       "discount": 0,
-      "category": 2
+      `"category": 2`
    }
 ]
 ```
@@ -212,7 +243,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/manisinsalmp6988.jpg",
       "price": 500,
       "discount": 0,
-      "category": 5
+      `"category": 5`
    },
    {
       "id": 55,
@@ -220,7 +251,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/papaslisas7271.jpg",
       "price": 500,
       "discount": 0,
-      "category": 5
+      `"category": 5`
    },
    ...
    {
@@ -229,7 +260,7 @@ Al dar click sobre una de las **"categorias"**, se enviará **01 peticion** a la
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/78028005335657432.jpg",
       "price": 1990,
       "discount": 0,
-      "category": 5
+      `"category": 5`
    }
 ]
 ```
@@ -264,7 +295,7 @@ Al ingresar un **"nombre"** en el "buscador" o "search bar" del Navbar y dar cli
 [
    {
       "id": 35,
-      "name": "ENERGETICA MAKKA DRINKS",
+      `"name": "ENERGETICA MAKKA DRINKS",`
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/makka-drinks-250ml0455.jpg",
       "price": 1190,
       "discount": 0,
@@ -272,7 +303,7 @@ Al ingresar un **"nombre"** en el "buscador" o "search bar" del Navbar y dar cli
    },
    {
       "id": 7,
-      "name": "ENERGETICA SCORE",
+      `"name": "ENERGETICA SCORE",`
       "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/logo7698.png",
       "price": 1290,
       "discount": 0,
@@ -281,7 +312,7 @@ Al ingresar un **"nombre"** en el "buscador" o "search bar" del Navbar y dar cli
    ...
    {
       "id": 79,
-      "name": "ENERGETICA MONSTER VERDE",
+      `"name": "ENERGETICA MONSTER VERDE",`
       "url_image": "",
       "price": 1990,
       "discount": 0,
